@@ -69,9 +69,9 @@ public class MainWindow extends JFrame {
 		final Background bg = new Background();
 		final HangmanFigure hf = new HangmanFigure();
 		
-		corePanel.add(hf, BorderLayout.CENTER);
 		corePanel.add(bg, BorderLayout.CENTER);
-		
+		corePanel.add(hf, BorderLayout.CENTER);
+
 		lPane.add(corePanel, BorderLayout.CENTER);
 
 		this.add(corePanel, BorderLayout.CENTER);
@@ -110,10 +110,11 @@ public class MainWindow extends JFrame {
 							status.setText("You have "+remainingGuesses+" guesses remaining");
 							wrongGuesses += text+" ";
 							wrong.setText("Wrong guesses so far: "+wrongGuesses);
-							//hf.set();
+							hf.set();
 						}
 						else {
 							status.setText("You lost: the word was "+word);
+							hf.set();
 							input.setEnabled(false);
 							try {
 								showRestart();

@@ -1,91 +1,113 @@
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.net.URL;
 
-import javax.swing.JPanel;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
-public class HangmanFigure extends JPanel {
+public class HangmanFigure extends JLabel {
 	
 	private int guesses;
 	
-	URL plank = MainWindow.class.getResource("Plank.png");
-	URL head = MainWindow.class.getResource("PHead.png");
-	URL torso = MainWindow.class.getResource("PTorso.png");
-	URL leftFoot = MainWindow.class.getResource("PLeftFoot.png");
-	URL rightFoot = MainWindow.class.getResource("PRightFoot.png");
-	URL leftHand = MainWindow.class.getResource("PLeftHand.png");
-	URL rightHand = MainWindow.class.getResource("PRightHand.png");
+	
+	URL g0p = MainWindow.class.getResource("Guess0P.png");
+	URL g1p = MainWindow.class.getResource("Guess1P.png");
+	URL g2p = MainWindow.class.getResource("Guess2P.png");
+	URL g3p = MainWindow.class.getResource("Guess3P.png");
+	URL g4p = MainWindow.class.getResource("Guess4P.png");
+	URL g5p = MainWindow.class.getResource("Guess5P.png");
+	URL g6p = MainWindow.class.getResource("Guess6P.png");
+	URL g8p = MainWindow.class.getResource("Guess8P.png");
+	URL g9p = MainWindow.class.getResource("Guess9P.png");
 
-	Image img;
+	URL uLoseP = MainWindow.class.getResource("YouLoseP.png");
+	
+	
+	
+
+	ImageIcon guess0P = new ImageIcon(g0p);
+	ImageIcon guess1P  = new ImageIcon(g1p);
+	ImageIcon guess2P = new ImageIcon(g2p);
+	ImageIcon guess3P  = new ImageIcon(g3p);
+	ImageIcon guess4P = new ImageIcon(g4p);
+	ImageIcon guess5P  = new ImageIcon(g5p);
+	ImageIcon guess6P = new ImageIcon(g6p);
+	ImageIcon guess8P  = new ImageIcon(g8p);
+	ImageIcon guess9P = new ImageIcon(g9p);
+	ImageIcon loseP = new ImageIcon(uLoseP);
+
+	
+	
+	URL imageSrc = MainWindow.class.getResource("PirateBackground.png");
+	ImageIcon bg = new ImageIcon(imageSrc);
 
 	public HangmanFigure() {
-		super();
 		guesses = 0;
 		setPreferredSize(new Dimension(800, 600));
-		setVisible(true);
+		this.setIcon(bg);
+		validate();
 	}
+
+	public void paintComponent() {
 	
-	public void paintComponent(Graphics g) {
-	
-		
-		//plank
 		if(guesses > 0) {
-			img = Toolkit.getDefaultToolkit().createImage(plank);
-			g.drawImage(img, 0, 0, null);
+			this.setIcon(guess6P);
+			validate();
 		}
 		
-		// right wall
 		if(guesses > 1) {
-			g.drawLine(299, 299, 299, 1);
+			this.setIcon(guess5P);
+			validate();
 		}
-		
-		// top line
+
 		if(guesses > 2) {
-			g.drawLine(150, 1, 299, 1);
+			this.setIcon(guess4P);
+			validate();
 		}
 		
-		// hanging line
 		if(guesses > 3) {
-			g.drawLine(150, 1, 150, 70);
+			this.setIcon(guess3P);
+			validate();
 		}
-		
-		// face
+
 		if(guesses > 4) {
-			g.drawOval(150-25, 70, 50, 50);
+			this.setIcon(guess2P);
+			validate();
 		}
 		
-		// body
 		if(guesses > 5) {
-			g.drawLine(150, 120, 150, 200);
+			this.setIcon(guess1P);
+			validate();
 		}
 		
-		// left hand
 		if(guesses > 6) {
-			g.drawLine(150, 150, 110, 140);
+			this.setIcon(guess0P);
+			validate();
 		}
 		
-		// right hand
 		if(guesses > 7) {
-			g.drawLine(150, 150, 190, 140);
+			this.setIcon(guess8P);
+			validate();
 		}
 		
-		// left leg
 		if(guesses > 8) {
-			g.drawLine(150, 200, 120, 250);
+			this.setIcon(guess9P);
+			validate();
 		}
 		
-		// right leg
 		if(guesses > 9) {
-			g.drawLine(150, 200, 180, 250);
+			this.setIcon(guess6P);
+			validate();
+		}
+		if(guesses > 10) {
+			this.setIcon(loseP);
+			validate();
 		}
 	}
-	
+
 	public void set() {
 		guesses++;
-		paintComponent(getGraphics());
+		paintComponent();
 	}
-	
+
 }
