@@ -1,0 +1,200 @@
+adventure
+ahoy
+anchor
+armada
+arms
+asea
+ashore
+aye-aye
+bandanna
+bandit
+bandolier
+barbaric
+barrel
+battle
+beach
+behead
+boatswain
+bos'n
+bounty
+brawl
+brutal
+buccaneer
+cannon
+capsize
+captain
+capture
+cargo
+cave
+challenge
+chest
+coast
+coastline
+coins
+compass
+conquest
+contraband
+corpse
+corsair
+course
+crew
+criminal
+crook
+crows nest
+cruel
+curse
+cutlass
+cutthroat
+dagger
+danger
+daring
+dead reckoning
+deck
+deck hands
+desert island
+dishonest
+doubloon
+earring
+escape
+explore
+eye patch
+fight
+first mate
+flag
+fleet
+flotsam and jetsam
+fortune
+galleon
+gangplank
+gear
+gibbet
+gold
+greed
+gun
+gunner
+gunpowder
+haul
+high seas
+hijack
+hook
+hold
+horizon
+hull
+ill-gotten
+infamous
+island
+jetsam
+jewels
+Jolly Roger
+keel
+keelhaul
+kidnap
+kill
+knife
+land
+land-ho
+landlubber
+lash
+lawless
+legend
+limey
+Long John Silver
+lookout
+loot
+lore
+lucre
+maggot
+malaria
+map
+marauder
+matiner
+maroon
+mast
+mates
+mayhem
+menace
+merchant
+musket
+mutiny
+nautical
+navigate
+New World
+notorious
+ocean
+old salt
+Old World
+outcasts
+overboard
+parley
+parrot
+pegleg
+pieces of eight
+pillage
+pirate
+pistol
+plank
+plunder
+predatory
+privateer
+prowl
+quartermaster
+quarters
+quest
+raid
+ransack
+rat
+rations
+realm
+reckoning
+riches
+rigging
+rob
+robber
+rope
+rudder
+ruffian
+rum
+ruthless
+sabotage
+sail
+sailing
+sailor
+scalawag
+scar
+scurvy
+seas
+seaweed
+sextant
+ship
+shipmate
+shiver-me-timbers
+shore
+silver
+skiff
+skull and bones
+spoils
+steal
+swab the deck
+swagger
+swashbuckling
+sword
+thief
+thievery
+thug
+tides
+trade
+treachery
+treasure
+treasure island
+truce
+unlawful
+unscrupulous
+vandalize
+vanquish
+vessel
+vicious
+vile
+walk the plank
+X marks the spot
+yellow fever
+yo-ho-ho
