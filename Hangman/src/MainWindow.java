@@ -65,11 +65,8 @@ public class MainWindow extends JFrame {
 		
 		corePanel.add(southPanel, BorderLayout.SOUTH);
 		
-		
-		final Background bg = new Background();
 		final HangmanFigure hf = new HangmanFigure();
 		
-		corePanel.add(bg, BorderLayout.CENTER);
 		corePanel.add(hf, BorderLayout.CENTER);
 
 		lPane.add(corePanel, BorderLayout.CENTER);
