@@ -1,26 +1,40 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 
 import javax.swing.JPanel;
 
 public class HangmanFigure extends JPanel {
 	
 	private int guesses;
+	
+	URL plank = MainWindow.class.getResource("Plank.png");
+	URL head = MainWindow.class.getResource("PHead.png");
+	URL torso = MainWindow.class.getResource("PTorso.png");
+	URL leftFoot = MainWindow.class.getResource("PLeftFoot.png");
+	URL rightFoot = MainWindow.class.getResource("PRightFoot.png");
+	URL leftHand = MainWindow.class.getResource("PLeftHand.png");
+	URL rightHand = MainWindow.class.getResource("PRightHand.png");
+
+	Image img;
 
 	public HangmanFigure() {
 		super();
 		guesses = 0;
-		setPreferredSize(new Dimension(300, 300));
-		setOpaque(true);
+		setPreferredSize(new Dimension(800, 600));
+		setVisible(true);
 	}
 	
 	public void paintComponent(Graphics g) {
-		g.setColor(Color.BLACK);
+	
 		
-		// base
+		//plank
 		if(guesses > 0) {
-			g.drawLine(1, 299, 299, 299);
+			img = Toolkit.getDefaultToolkit().createImage(plank);
+			g.drawImage(img, 0, 0, null);
 		}
 		
 		// right wall

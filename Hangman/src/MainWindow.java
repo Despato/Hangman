@@ -1,10 +1,22 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.Random;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -27,9 +39,11 @@ public class MainWindow extends JFrame {
 			visible += "_ ";
 		}
 
+		JLayeredPane lPane = new JLayeredPane();
 		JPanel corePanel = new JPanel();
 		corePanel.setLayout(new BorderLayout());
 		
+	
 		final JLabel status = new JLabel("You have "+remainingGuesses+" remaining", SwingConstants.CENTER);
 		final JLabel wrong = new JLabel("Wrong guesses so far: "+wrongGuesses);
 		final JLabel visibleLabel = new JLabel(visible, SwingConstants.CENTER);
@@ -38,13 +52,20 @@ public class MainWindow extends JFrame {
 		JPanel southPanel = new JPanel(new GridLayout(4, 1));
 		southPanel.add(status);
 		southPanel.add(visibleLabel);
-		southPanel.add(input);
+		southPanel.add(input, BorderLayout.CENTER);
+		southPanel.setBackground(Color.ORANGE);
 		southPanel.add(wrong);
 		
 		corePanel.add(southPanel, BorderLayout.SOUTH);
 		
+		
+		final Background bg = new Background();
 		final HangmanFigure hf = new HangmanFigure();
+		
 		corePanel.add(hf, BorderLayout.CENTER);
+		corePanel.add(bg, BorderLayout.CENTER);
+		
+		lPane.add(corePanel, BorderLayout.CENTER);
 
 		this.add(corePanel, BorderLayout.CENTER);
 		
@@ -82,7 +103,7 @@ public class MainWindow extends JFrame {
 							status.setText("You have "+remainingGuesses+" guesses remaining");
 							wrongGuesses += text+" ";
 							wrong.setText("Wrong guesses so far: "+wrongGuesses);
-							hf.set();
+							//hf.set();
 						}
 						else {
 							status.setText("You lost: the word was "+word);
@@ -117,7 +138,28 @@ public class MainWindow extends JFrame {
 		this.setVisible(true);
 	}
 	
-	public static void main(String[] args) {
-		new MainWindow("cat");
+	public static String chooseWord(String file) throws IOException{
+		   InputStream is = MainWindow.class.getResourceAsStream(file);
+		   
+		   InputStreamReader fr = new InputStreamReader(is);
+	       BufferedReader readFile = new BufferedReader(fr);
+	      
+	       String line = null;
+	       Random rand = new Random();
+	       final int MAXWORD = 200;
+	       int randNum =  rand.nextInt((MAXWORD) + 1);
+	       String word = "";
+	       
+	       int i = 0;
+	       while ((line = readFile.readLine()) != null && i <= randNum){
+	    	   word = line;
+	    	   i++;
+	       }
+	       return word;
+	}   
+	
+	public static void main(String[] args) throws IOException {
+				
+		new MainWindow(chooseWord("PirateWords.txt"));
 	}
 }
