@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -14,10 +15,14 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Random;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -27,6 +32,8 @@ public class MainWindow extends JFrame {
 	private String wrongGuesses;
 	private String word;
 	private String visible;
+	
+	private MainWindow view;
 
 	public MainWindow(String toGuess) {
 		remainingGuesses = 10;
@@ -108,6 +115,12 @@ public class MainWindow extends JFrame {
 						else {
 							status.setText("You lost: the word was "+word);
 							input.setEnabled(false);
+							try {
+								showRestart();
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 						}
 					}
 					else {
@@ -119,6 +132,12 @@ public class MainWindow extends JFrame {
 						if(actualVisible.equals(word)) {
 							status.setText("Congratulations, you have won!");
 							input.setEnabled(false);
+							try {
+								showRestart();
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 						}
 					}
 					
@@ -136,6 +155,22 @@ public class MainWindow extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
+	}
+
+	public void remove() {
+	   view.remove(this);
+	}
+	
+	public void showRestart() throws IOException{                                            
+		int dialogButton = JOptionPane.YES_NO_OPTION;
+		int dialogResult = JOptionPane.showConfirmDialog(this, "Restart", "Would you like to restart?", dialogButton);
+		if(dialogResult == 0) {
+		   new MainWindow(chooseWord("PirateWords.txt"));
+		   setVisible(false);
+		   dispose();
+		} else {
+		   System.exit(0);
+		} 
 	}
 	
 	public static String chooseWord(String file) throws IOException{
