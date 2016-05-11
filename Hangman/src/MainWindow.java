@@ -32,13 +32,15 @@ public class MainWindow extends JFrame {
 	private String wrongGuesses;
 	private String word;
 	private String visible;
-	
-	private MainWindow view;
+	String toGuess;
 
-	public MainWindow(String toGuess) {
+
+	public MainWindow(String toGuess) throws IOException {
+		
 		remainingGuesses = 10;
+		this.toGuess = toGuess;
 		wrongGuesses = "";
-		word = toGuess;
+		word = chooseWord(toGuess);
 
 		visible = "";
 
@@ -46,7 +48,6 @@ public class MainWindow extends JFrame {
 			visible += "_ ";
 		}
 
-		JLayeredPane lPane = new JLayeredPane();
 		JPanel corePanel = new JPanel();
 		corePanel.setLayout(new BorderLayout());
 		
@@ -65,11 +66,9 @@ public class MainWindow extends JFrame {
 		
 		corePanel.add(southPanel, BorderLayout.SOUTH);
 		
-		final HangmanFigure hf = new HangmanFigure();
+		final HangmanFigure hf = new HangmanFigure(toGuess);
 		
 		corePanel.add(hf, BorderLayout.CENTER);
-
-		lPane.add(corePanel, BorderLayout.CENTER);
 
 		this.add(corePanel, BorderLayout.CENTER);
 		
@@ -151,19 +150,17 @@ public class MainWindow extends JFrame {
 		
 		this.pack();
 		this.setLocationRelativeTo(null);
+		this.setTitle("Hangman");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 
-	public void remove() {
-	   view.remove(this);
-	}
 	
 	public void showRestart() throws IOException{                                            
 		int dialogButton = JOptionPane.YES_NO_OPTION;
 		int dialogResult = JOptionPane.showConfirmDialog(this, "Restart", "Would you like to restart?", dialogButton);
 		if(dialogResult == 0) {
-		   new MainWindow(chooseWord("PirateWords.txt"));
+		   new MainWindow(toGuess);
 		   setVisible(false);
 		   dispose();
 		} else {
@@ -172,6 +169,7 @@ public class MainWindow extends JFrame {
 	}
 	
 	public static String chooseWord(String file) throws IOException{
+		   
 		   InputStream is = MainWindow.class.getResourceAsStream(file);
 		   
 		   InputStreamReader fr = new InputStreamReader(is);
@@ -190,9 +188,4 @@ public class MainWindow extends JFrame {
 	       }
 	       return word;
 	}   
-	
-	public static void main(String[] args) throws IOException {
-				
-		new MainWindow(chooseWord("PirateWords.txt"));
-	}
 }
