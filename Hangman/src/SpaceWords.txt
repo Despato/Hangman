@@ -1,5 +1,5 @@
 albedo
-Alpha Centauri
+AlphaCentauri
 apastron
 aperature
 aphelion
@@ -8,90 +8,90 @@ asterism
 asteroid
 astronaut
 astronomer
-astronomical unit
+astronomicalunit
 astronomy
-axial tilt
+axialtilt
 azimuth
-background radiation
-Bailey's beads
-big bang theory
-binary star
-black body
-black hole
+backgroundradiation
+Bailey'sbeads
+bigbangtheory
+binarystar
+blackbody
+blackhole
 celestial
-celestial equator
+celestialequator
 cluster
 comet
 conjunction
 constellation
-coriolis force
-cosmic rays
+coriolisforce
+cosmicrays
 corona
 cosmology
 cosmonaut
 cosmos
 crater
-crescent moon
-dark matter
+crescentmoon
+darkmatter
 day
 declination
-deep space
+deepspace
 Deneb
 density
 docking
-Doppler shift
+Dopplershift
 dust
-dwarf planet
-dwarf star
+dwarfplanet
+dwarfstar
 Earth
 earthbound
 eclipse
 ecliptic
-escape velocity
-event horizon
+escapevelocity
+eventhorizon
 exoplanet
 extragalaxtic
-falling star
+fallingstar
 flyby
-free fall
-full moon
+freefall
+fullmoon
 galaxy
-gamma ray
-gas giant
+gammaray
+gasgiant
 gegenschein
 geostationary
 geosynchronous
-gibbous moon
-globular cluster
+gibbousmoon
+globularcluster
 gravitation
-gravitational constant
-gravitational lens
+gravitationalconstant
+gravitationallens
 gravity
-half moon
+halfmoon
 heliocentric
 hydrogen
 helium
-H-R diagram
-Hubble telescope
-Hubble's law
-hyperbolic orbit
+H-Rdiagram
+Hubbletelescope
+Hubble'slaw
+hyperbolicorbit
 hypernova
-ice giant
+icegiant
 inclination
-inner planets
+innerplanets
 interstellar
-interstellar dust
+interstellardust
 ionosphere
 Jupiter
-Kepler's laws
+Kepler'slaws
 kiloparsec
-Kirkwood gaps
-Kuiper belt
-Lagrange points
+Kirkwoodgaps
+Kuiperbelt
+Lagrangepoints
 lens
 light-year
-local arm
-local group
+localarm
+localgroup
 lunar
 magnitude
 mare
@@ -99,11 +99,11 @@ Mars
 mass
 Mercury
 meteor
-meteor shower
+meteorshower
 meteorite
 meteoroid
-Milky Way
-minor planet
+MilkyWay
+minorplanet
 Mir
 moon
 muttnik
@@ -111,56 +111,56 @@ nadir
 NASA
 nebula
 Neptune
-neutron star
-new moon
-north star
+neutronstar
+newmoon
+northstar
 nova
 observatory
 occultation
-Oort cloud
+Oortcloud
 opposition
 orbit
-orbital eccentricity
-orbital inclination
-outer planets
+orbitaleccentricity
+orbitalinclination
+outerplanets
 parallax
 parsec
-partial eclipse
+partialeclipse
 perturbation
 phase
-plane of the ecliptic
+planeoftheecliptic
 planet
 planetoid
 Pluto
-pole star
+polestar
 probe
 pulsar
-quarter moon
+quartermoon
 quasar
 radiant
 radiation
-red dwarf
-red giant star
-red shift
+reddwarf
+redgiantstar
+redshift
 revolve
-right ascension
+rightascension
 rings
-Roche limit
+Rochelimit
 rocket
 satellite
 Saturn
-scientific notation
+scientificnotation
 scintillation
-shooting star
+shootingstar
 solar
 singularity
 solar
-solar system
-solar wind
+solarsystem
+solarwind
 solstice
 space
-space exploration
-space station
+spaceexploration
+spacestation
 spectroscope
 spectrum
 Sputnik
@@ -168,7 +168,7 @@ star
 starlight
 sun
 sunspot
-superior planets
+superiorplanets
 supernova
 synodic
 syzygy
@@ -176,7 +176,7 @@ telemetry
 telescope
 terminator
 terrestrial
-total eclipse
+totaleclipse
 totality
 transit
 translunar
@@ -185,16 +185,16 @@ umbra
 universe
 Uranus
 vacuum
-Van Allen belt
+VanAllenbelt
 Venus
-vernal equinox
-visual magnitude
+vernalequinox
+visualmagnitude
 waning
 wavelength
 waxing
 weightlessness
-white dwarf
-white giant
+whitedwarf
+whitegiant
 wormhole
 x-rays
 zodiac

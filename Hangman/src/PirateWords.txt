@@ -40,7 +40,7 @@ course
 crew
 criminal
 crook
-crows nest
+crowsnest
 cruel
 curse
 cutlass
@@ -48,21 +48,21 @@ cutthroat
 dagger
 danger
 daring
-dead reckoning
+deadreckoning
 deck
-deck hands
-desert island
+deckhands
+desertisland
 dishonest
 doubloon
 earring
 escape
 explore
-eye patch
+eyepatch
 fight
-first mate
+firstmate
 flag
 fleet
-flotsam and jetsam
+flotsamandjetsam
 fortune
 galleon
 gangplank
@@ -74,7 +74,7 @@ gun
 gunner
 gunpowder
 haul
-high seas
+highseas
 hijack
 hook
 hold
@@ -85,7 +85,7 @@ infamous
 island
 jetsam
 jewels
-Jolly Roger
+JollyRoger
 keel
 keelhaul
 kidnap
@@ -98,7 +98,7 @@ lash
 lawless
 legend
 limey
-Long John Silver
+LongJohnSilver
 lookout
 loot
 lore
@@ -118,17 +118,17 @@ musket
 mutiny
 nautical
 navigate
-New World
+NewWorld
 notorious
 ocean
-old salt
-Old World
+oldsalt
+OldWorld
 outcasts
 overboard
 parley
 parrot
 pegleg
-pieces of eight
+piecesofeight
 pillage
 pirate
 pistol
@@ -171,10 +171,10 @@ shiver-me-timbers
 shore
 silver
 skiff
-skull and bones
+skullandbones
 spoils
 steal
-swab the deck
+swabthedeck
 swagger
 swashbuckling
 sword
@@ -185,7 +185,7 @@ tides
 trade
 treachery
 treasure
-treasure island
+treasureisland
 truce
 unlawful
 unscrupulous
@@ -194,7 +194,7 @@ vanquish
 vessel
 vicious
 vile
-walk the plank
-X marks the spot
-yellow fever
+walktheplank
+Xmarksthespot
+yellowfever
 yo-ho-ho
